@@ -15,8 +15,7 @@ export default function Header() {
       </h1>
       <p className="text-xl mb-4 text-accent-1">Student Developer</p>
       <div className="flex flex-wrap justify-center gap-4 text-text-secondary">
-        <p>📍 Chipledhunga - 9, Pokhara, Kaski, Nepal</p>
-        <p>📞 +977 9846359074</p>
+        <p>📍 Pokhara - 9, Kaski, Nepal</p>
         <p>📧 sarun.hirachan@gmail.com</p>
         <a
           href="https://www.linkedin.com/in/sarun-hirachan/"
