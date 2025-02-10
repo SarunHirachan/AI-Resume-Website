@@ -60,8 +60,12 @@
     "zod": "^3.24.1",
     "@emotion/is-prop-valid": "latest",
     "tailwindcss": "latest",
+    "date-fns": "^2.30.0",
     "framer-motion": "latest"
   },
+  "resolutions": {
+  "date-fns": "^2.30.0"
+},
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^18",
