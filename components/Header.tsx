@@ -13,7 +13,7 @@ export default function Header() {
       <h1 className="text-4xl font-bold mb-2 text-text-primary">
         Sarun Hirachan <span className="wave">👋</span>
       </h1>
-      <p className="text-xl mb-4 text-accent-1">Student Developer</p>
+      <p className="text-xl mb-4 text-accent-1">Founder and Student</p>
       <div className="flex flex-wrap justify-center gap-4 text-text-secondary">
         <p>📍 Pokhara - 9, Kaski, Nepal</p>
         <p>📧 sarun.hirachan@gmail.com</p>
