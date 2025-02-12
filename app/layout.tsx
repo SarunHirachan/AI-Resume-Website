@@ -8,7 +8,9 @@ export const metadata = {
   title: "Sarun Hirachan - Resume",
   description: "Professional resume of Sarun Hirachan",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
+    apple: '/logo.png',
+    shortcut: '/logo.png',
   },
 }
 
