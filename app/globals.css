@@ -28,6 +28,7 @@
 body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background))) rgb(var(--background));
   color: rgb(var(--foreground));
+  padding-top: 80px; /* Add padding to account for the fixed logo */
 }
 
 @layer utilities {
@@ -35,8 +36,6 @@ body {
     text-wrap: balance;
   }
 }
-
-/* Add these styles at the end of your globals.css file */
 
 .greeting-container {
   position: relative;
