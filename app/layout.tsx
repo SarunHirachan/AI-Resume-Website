@@ -1,7 +1,6 @@
 import "./globals.css"
 import { Fira_Code } from 'next/font/google'
 import type React from "react"
-import Image from 'next/image'
 
 const firaCode = Fira_Code({ subsets: ["latin"] })
 
@@ -9,9 +8,10 @@ export const metadata = {
   title: "Sarun Hirachan - Resume",
   description: "Professional resume of Sarun Hirachan",
   icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
-    shortcut: '/logo.png',
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png', sizes: '64x64', type: 'image/png' },
+    ],
   },
 }
 
@@ -23,20 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
       </head>
-      <body className={`${firaCode.className} bg-bg-dark text-text-primary`}>
-        <div className="fixed top-4 left-4 z-50">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={64}
-            height={64}
-            className="rounded-full"
-          />
-        </div>
-        {children}
-      </body>
+      <body className={`${firaCode.className} bg-bg-dark text-text-primary`}>{children}</body>
     </html>
   )
 }
