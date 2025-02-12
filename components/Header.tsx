@@ -21,7 +21,7 @@ export default function Header() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="text-center mb-12 bg-bg-section-2 p-8 rounded-lg mt-16"
+      className="text-center mb-12 bg-bg-section-2 p-8 rounded-lg"
     >
       <div className="greeting-container h-16 mb-6">
         <AnimatePresence mode="wait">
