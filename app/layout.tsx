@@ -1,5 +1,5 @@
 import "./globals.css"
-import { Fira_Code } from "next/font/google"
+import { Fira_Code } from 'next/font/google'
 import type React from "react"
 
 const firaCode = Fira_Code({ subsets: ["latin"] })
@@ -7,6 +7,9 @@ const firaCode = Fira_Code({ subsets: ["latin"] })
 export const metadata = {
   title: "Sarun Hirachan - Resume",
   description: "Professional resume of Sarun Hirachan",
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
@@ -20,4 +23,3 @@ export default function RootLayout({
     </html>
   )
 }
-
