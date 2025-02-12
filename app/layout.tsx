@@ -21,6 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/logo.png" />
+      </head>
       <body className={`${firaCode.className} bg-bg-dark text-text-primary`}>{children}</body>
     </html>
   )
