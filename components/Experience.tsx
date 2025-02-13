@@ -11,7 +11,69 @@ const experiences = [
       "Awarded a prestigious year-long premium DataCamp subscription ($500 value) through DataCamp Donate and Sunway Student Representative Council. Engaged in advanced data science, AI, and technology courses.",
     emoji: "📊",
   },
-  // ... (keep the rest of the experiences array as it was)
+  {
+    title: "Intern",
+    company: "Nobel Navigators",
+    duration: "November 2024 - Present",
+    description:
+      "Trained in web design, pitch/presentation development, internet troubleshooting, and leadership through an online internship program.",
+    emoji: "🎓",
+  },
+  {
+    title: "Founder",
+    company: "Eureka Organization",
+    duration: "September 2024 - Present",
+    description:
+      "Founded a youth-led organization focused on technology, innovation, and self-development for youths and students. Led workshops, campaigns, and events to empower youth, establishing an executive team of eight members.",
+    emoji: "💡",
+  },
+  {
+    title: "IT Officer, Board of Directors",
+    company: "Interact Club of Pokhara Lakeside",
+    duration: "July 2024 - Present",
+    description:
+      "Manage technical operations for events, ensuring seamless execution of programs. Coordinate and lead activities, and programs beyond technical operations.",
+    emoji: "🖥️",
+  },
+  {
+    title: "Digital Rights School Fellow",
+    company: "Digital Rights Nepal",
+    duration: "July 2024 - Present",
+    description:
+      "Completed a two-day in-person workshop on Digital Rights and Safety. An active member of the Digital Rights Advocate Network Gandaki, promoting digital literacy and online safety.",
+    emoji: "🔒",
+  },
+  {
+    title: "Member",
+    company: "LOFA Pokhara",
+    duration: "January 2024 - Present",
+    description: "Actively participate in events and programs organized by LOFA Pokhara.",
+    emoji: "🤝",
+  },
+  {
+    title: "Rover",
+    company: "Nepal Scouts, Milan Scout Crew",
+    duration: "June 2023 - Present",
+    description:
+      "Actively volunteer and participate in Nepal Scouts events, training sessions, camps, and community service projects.",
+    emoji: "🏕️",
+  },
+  {
+    title: "Community Leader (Nepal Community)",
+    company: "Hand in Hand Global NGO",
+    duration: "August 2024 - November 2024",
+    description:
+      "Coordinated community-building initiatives under the NGO's guidance, fostering collaboration and local engagement.",
+    emoji: "🌏",
+  },
+  {
+    title: "Co-head, Department of Computer Science",
+    company: "Innovation Club Motherland",
+    duration: "May 2023 - June 2024",
+    description:
+      "Led club activities, organized tech workshops, and mentored members in computer science fundamentals.",
+    emoji: "💻",
+  }
 ]
 
 const sortedExperiences = [...experiences].sort((a, b) => {
