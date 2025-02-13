@@ -26,13 +26,12 @@ const sortedEducation = [...education].sort((a, b) => {
 export default function Education() {
   return (
     <motion.section
-      id="education"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
-      className="mb-12 p-6 rounded-lg shadow-lg bg-opacity-50 bg-gray-100 dark:bg-opacity-50 dark:bg-gray-800"
+      className="mb-12 p-6 rounded-lg shadow-lg bg-[#1a1a1a]"
     >
-      <h2 className="text-2xl font-bold mb-6 pb-2 flex items-center gap-2">
+      <h2 className="text-2xl font-bold mb-6 text-white pb-2 flex items-center gap-2">
         <span>🎓</span> Education
       </h2>
       <div className="space-y-6">
@@ -42,14 +41,14 @@ export default function Education() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-white dark:bg-gray-700 p-4 rounded-md"
+            className="bg-[#2a2a2a] p-4 rounded-md"
           >
             <div className="flex items-start gap-3">
               <span className="p-2 mt-1">{edu.emoji}</span>
               <div className="space-y-2 flex-1">
-                <h3 className="text-xl font-semibold">{edu.school}</h3>
-                <p>{edu.degree}</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{edu.duration}</p>
+                <h3 className="text-xl font-semibold text-white">{edu.school}</h3>
+                <p className="text-white">{edu.degree}</p>
+                <p className="text-white text-sm">{edu.duration}</p>
               </div>
             </div>
           </motion.div>
