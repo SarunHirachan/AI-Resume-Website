@@ -9,7 +9,24 @@ const awards = [
     date: "August 2024",
     emoji: "🏅",
   },
-  // ... (keep the rest of the awards array as it was)
+  {
+    title: "Eco Delegate Showcase Representative",
+    issuer: "3rd Virtual Green Fest, Notre Dame Nature Study Club",
+    date: "June 2024",
+    emoji: "🌿",
+  },
+  {
+    title: "Best Position Paper",
+    issuer: "Pokhara Model UN Edition V, Youth Thinkers' Society Pokhara",
+    date: "May 2024",
+    emoji: "📄",
+  },
+  {
+    title: "2nd Runner-Up",
+    issuer: "dpHackathon 1.0, Digital Pathshala",
+    date: "December 2023",
+    emoji: "🏆",
+  }
 ]
 
 const sortedAwards = [...awards].sort((a, b) => {
