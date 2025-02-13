@@ -1,8 +1,9 @@
 import "./globals.css"
-import { Fira_Code } from 'next/font/google'
+import { Montserrat, Roboto } from 'next/font/google'
 import type React from "react"
 
-const firaCode = Fira_Code({ subsets: ["latin"] })
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-roboto' })
 
 export const metadata = {
   title: "Sarun Hirachan - Resume",
@@ -21,12 +22,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${roboto.variable}`}>
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
         <link rel="icon" type="image/png" sizes="64x64" href="/logo.png" />
       </head>
-      <body className={`${firaCode.className} bg-bg-dark text-text-primary`}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
