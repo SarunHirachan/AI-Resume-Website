@@ -11,7 +11,7 @@ const skills = [
   { name: "Team Collaboration", emoji: "🤝" },
   { name: "Article Writing & Research", emoji: "📝" },
   { name: "Event Organizing", emoji: "📅" },
-  { name: "Scouting", emoji: "🏕️" },
+  { name: "Scouting", emoji: "🏕️" }
 ]
 
 export default function Skills() {
