@@ -8,10 +8,9 @@ export const metadata = {
   title: "Sarun Hirachan - Resume",
   description: "Professional resume of Sarun Hirachan",
   icons: {
-    icon: [
-      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/logo.png', sizes: '64x64', type: 'image/png' },
-    ],
+    icon: '/logo.png',
+    apple: '/logo.png',
+    shortcut: '/logo.png',
   },
 }
 
@@ -23,8 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
-        <link rel="icon" type="image/png" sizes="64x64" href="/logo.png" />
+        <link rel="icon" type="image/png" href="/logo.png" />
       </head>
       <body className={`${firaCode.className} bg-bg-dark text-text-primary`}>{children}</body>
     </html>
