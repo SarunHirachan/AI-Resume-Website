@@ -10,7 +10,28 @@ const volunteeringExperiences = [
     description: "Assist in organizing Model UN conferences and youth empowerment programs.",
     emoji: "🤝",
   },
-  // ... (keep the rest of the volunteeringExperiences array as it was)
+  {
+    title: "Content Creator",
+    organization: "SEE Ko Guide",
+    duration: "August 2024 - Present",
+    description: "Develop educational PowerPoints and YouTube videos for SEE exam preparation.",
+    emoji: "🎥",
+  },
+  {
+    title: "Co-Chair, UN-WOMEN Committee",
+    organization: "MY-MUN 2024",
+    duration: "September 6–7, 2024",
+    description:
+      "Served as Co-Chair of the UN-WOMEN Committee at MY-MUN 2024, assisting in committee proceedings. Collaborated with the Chair to guide delegates and ensure smooth discussions.",
+    emoji: "🌐",
+  },
+  {
+    title: "Service Team Rover",
+    organization: "2nd Adventure Fest",
+    duration: "June 15–24, 2024",
+    description: "Provided logistical support for a Nepal Scouts Gandaki Province event.",
+    emoji: "🏕️",
+  }
 ]
 
 const sortedVolunteeringExperiences = [...volunteeringExperiences].sort((a, b) => {
