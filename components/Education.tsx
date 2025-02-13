@@ -7,14 +7,16 @@ const education = [
     school: "Motherland Secondary School",
     degree: "SLC (School Leaving Certificate), Management",
     duration: "June 2022 - August 2024",
+    description: "Completed secondary education with a focus on Management studies. Actively participated in extracurricular activities and leadership roles.",
     emoji: "🎓",
   },
   {
     school: "Shishu Niketan Secondary English School",
     degree: "SEE (Secondary Education Examination)",
     duration: "April 2009 - March 2022",
+    description: "Completed basic education with distinction. Participated in various academic and extracurricular activities.",
     emoji: "📚",
-  },
+  }
 ]
 
 const sortedEducation = [...education].sort((a, b) => {
@@ -49,6 +51,7 @@ export default function Education() {
                 <h3 className="text-xl font-semibold text-white">{edu.school}</h3>
                 <p className="text-white">{edu.degree}</p>
                 <p className="text-white text-sm">{edu.duration}</p>
+                <p className="text-white text-sm">{edu.description}</p>
               </div>
             </div>
           </motion.div>
