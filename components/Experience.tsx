@@ -89,7 +89,7 @@ export default function Experience() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="mb-12 p-6 rounded-lg shadow-lg bg-card"
+      className="mb-12 p-8 rounded-lg shadow-lg bg-card/80 backdrop-blur-sm"
     >
       <h2 className="text-2xl font-bold mb-6 text-center pb-2 flex items-center justify-center gap-2">
         <span>💼</span> Experience
