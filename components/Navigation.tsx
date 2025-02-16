@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion"
 import { Award, BriefcaseIcon, GraduationCap, Heart, Sparkles } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const navItems = [
   { name: "Skills", icon: Sparkles, href: "#skills" },
   { name: "Experience", icon: BriefcaseIcon, href: "#experience" },
-  { name: "Volunteering", icon: Heart, href: "#volunteering" }, // Changed from HandHeart to Heart
+  { name: "Volunteering", icon: Heart, href: "#volunteering" },
   { name: "Awards", icon: Award, href: "#awards" },
   { name: "Education", icon: GraduationCap, href: "#education" },
 ]
@@ -14,23 +15,26 @@ const navItems = [
 export default function Navigation() {
   return (
     <motion.nav 
-      initial={{ opacity: 0, x: 100 }} 
-      animate={{ opacity: 1, x: 0 }} 
-      className="fixed top-16 right-4 z-50"
+      initial={{ opacity: 0, y: -20 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4"
     >
-      <div className="flex flex-col gap-2 p-2 rounded-2xl bg-background/80 backdrop-blur-sm border">
+      <div className="flex items-center gap-2 p-2 rounded-full bg-background/80 backdrop-blur-sm border">
         {navItems.map((item) => (
-          <a
+          <motion.a
             key={item.name}
             href={item.href}
-            className="group relative flex items-center gap-2 p-2 rounded-xl hover:bg-accent transition-colors"
+            className="group relative flex items-center gap-2 p-2 rounded-full hover:bg-accent transition-colors active:scale-95"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <item.icon className="h-5 w-5" />
-            <span className="absolute left-8 px-2 py-1 rounded-lg bg-popover text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-2 py-1 rounded-lg bg-popover text-sm opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
               {item.name}
             </span>
-          </a>
+          </motion.a>
         ))}
+        <ThemeToggle />
       </div>
     </motion.nav>
   )
