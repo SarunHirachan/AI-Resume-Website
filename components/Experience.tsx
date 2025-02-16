@@ -85,12 +85,13 @@ const sortedExperiences = [...experiences].sort((a, b) => {
 export default function Experience() {
   return (
     <motion.section
+      id="experience"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="mb-12 p-6 rounded-lg shadow-lg bg-[#1a1a1a]"
+      className="mb-12 p-6 rounded-lg shadow-lg bg-card"
     >
-      <h2 className="text-2xl font-bold mb-6 text-white pb-2 flex items-center gap-2">
+      <h2 className="text-2xl font-bold mb-6 text-center pb-2 flex items-center justify-center gap-2">
         <span>💼</span> Experience
       </h2>
       <div className="space-y-6">
@@ -100,15 +101,15 @@ export default function Experience() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-[#2a2a2a] p-4 rounded-md"
+            className="bg-secondary p-4 rounded-md"
           >
             <div className="flex items-start gap-3">
               <span className="p-2 mt-1">{exp.emoji}</span>
               <div className="space-y-2 flex-1">
-                <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
-                <p className="text-white">{exp.company}</p>
-                <p className="text-white text-sm">{exp.duration}</p>
-                <p className="text-white">{exp.description}</p>
+                <h3 className="text-xl font-semibold">{exp.title}</h3>
+                <p className="text-accent-foreground">{exp.company}</p>
+                <p className="text-sm text-muted-foreground">{exp.duration}</p>
+                <p>{exp.description}</p>
               </div>
             </div>
           </motion.div>
