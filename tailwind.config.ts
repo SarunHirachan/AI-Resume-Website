@@ -2,11 +2,22 @@ import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: ["class"],
-  content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}", "*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       fontFamily: {
-        sans: ["var(--font-fira-code)", "monospace"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -42,16 +53,6 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "bg-dark": "#000000",
-        "bg-card": "#1a1a1a",
-        "text-primary": "#ffffff",
-        "text-secondary": "#a0a0a0",
-        "accent-1": "#e0e0e0",
-        "accent-2": "#808080",
-        "bg-section-1": "#1a1a1a",
-        "bg-section-2": "#212121",
-        "bg-section-3": "#282828",
-        "bg-section-4": "#2e2e2e",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -62,4 +63,5 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate")],
 }
+
 export default config

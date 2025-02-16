@@ -1,17 +1,18 @@
 import "./globals.css"
-import { Fira_Code } from 'next/font/google'
-import type React from "react"
+import { Inter } from 'next/font/google'
+import { ThemeProvider } from "@/components/theme-provider"
+import Navigation from "@/components/Navigation"
+import ThemeToggle from "@/components/ThemeToggle"
+import type { Metadata } from "next"
 
-const firaCode = Fira_Code({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Sarun Hirachan - Resume",
   description: "Professional resume of Sarun Hirachan",
-  icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
-    shortcut: '/logo.png',
-  },
 }
 
 export default function RootLayout({
@@ -20,11 +21,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" type="image/png" href="/logo.png" />
-      </head>
-      <body className={`${firaCode.className} bg-bg-dark text-text-primary`}>{children}</body>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <body className="font-sans">
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <Navigation />
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
