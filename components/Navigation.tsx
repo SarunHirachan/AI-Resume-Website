@@ -13,6 +13,14 @@ const navItems = [
 ]
 
 export default function Navigation() {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <motion.nav 
       initial={{ opacity: 0, y: -20 }} 
@@ -24,12 +32,13 @@ export default function Navigation() {
           <motion.a
             key={item.name}
             href={item.href}
+            onClick={(e) => scrollToSection(e, item.href)}
             className="group relative flex items-center gap-2 p-2 rounded-full hover:bg-accent transition-colors active:scale-95"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <item.icon className="h-5 w-5" />
-            <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-2 py-1 rounded-lg bg-popover text-sm opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
+            <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-lg bg-popover text-sm opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all whitespace-nowrap">
               {item.name}
             </span>
           </motion.a>
