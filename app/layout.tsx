@@ -1,11 +1,11 @@
+import type React from "react"
 import "./globals.css"
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import Navigation from "@/components/Navigation"
-import ThemeToggle from "@/components/ThemeToggle"
 import type { Metadata } from "next"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 })
@@ -22,10 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
-      <body className="font-sans">
-        <ThemeProvider attribute="class" defaultTheme="dark">
+      <body className="font-sans min-h-screen">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Navigation />
-          <ThemeToggle />
           {children}
         </ThemeProvider>
       </body>
