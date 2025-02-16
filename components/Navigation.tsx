@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Award, BriefcaseIcon, GraduationCap, Heart, Sparkles } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
 
 const navItems = [
   { name: "Skills", icon: Sparkles, href: "#skills" },
@@ -23,27 +22,26 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      initial={{ opacity: 0, y: -20 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4"
+      initial={{ opacity: 0, x: 20 }} 
+      animate={{ opacity: 1, x: 0 }} 
+      className="fixed top-4 right-4 z-50 flex flex-col items-end gap-2"
     >
-      <div className="flex items-center gap-2 p-2 rounded-full bg-background/80 backdrop-blur-sm border">
+      <div className="flex flex-col items-end gap-2 p-2 rounded-lg bg-background/80 backdrop-blur-sm border">
         {navItems.map((item) => (
           <motion.a
             key={item.name}
             href={item.href}
             onClick={(e) => scrollToSection(e, item.href)}
-            className="group relative flex items-center gap-2 p-2 rounded-full hover:bg-accent transition-colors active:scale-95"
+            className="group flex items-center gap-2 p-2 rounded-md hover:bg-accent transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <item.icon className="h-5 w-5" />
-            <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-lg bg-popover text-sm opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all whitespace-nowrap">
+            <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">
               {item.name}
             </span>
+            <item.icon className="h-5 w-5" />
           </motion.a>
         ))}
-        <ThemeToggle />
       </div>
     </motion.nav>
   )
