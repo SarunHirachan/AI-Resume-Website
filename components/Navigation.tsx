@@ -1,21 +1,21 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, BookOpen, BriefcaseIcon, GraduationCap, HandHeart, Sparkles } from 'lucide-react'
+import { Award, BriefcaseIcon, GraduationCap, Heart, Sparkles } from 'lucide-react'
 
 const navItems = [
   { name: "Skills", icon: Sparkles, href: "#skills" },
   { name: "Experience", icon: BriefcaseIcon, href: "#experience" },
-  { name: "Volunteering", icon: HandHeart, href: "#volunteering" },
+  { name: "Volunteering", icon: Heart, href: "#volunteering" }, // Changed from HandHeart to Heart
   { name: "Awards", icon: Award, href: "#awards" },
-  { name: "Education", icon: GraduationCap, href: "#education" }
+  { name: "Education", icon: GraduationCap, href: "#education" },
 ]
 
 export default function Navigation() {
   return (
-    <motion.nav
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
+    <motion.nav 
+      initial={{ opacity: 0, x: 100 }} 
+      animate={{ opacity: 1, x: 0 }} 
       className="fixed top-16 right-4 z-50"
     >
       <div className="flex flex-col gap-2 p-2 rounded-2xl bg-background/80 backdrop-blur-sm border">
