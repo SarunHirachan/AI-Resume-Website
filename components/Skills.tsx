@@ -21,7 +21,7 @@ export default function Skills() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="mb-12 p-8 rounded-lg shadow-lg bg-card/80 backdrop-blur-sm"
+      className="bg-secondary/80 hover:bg-secondary/100 transition-all duration-300 p-4 rounded-md"
     >
       <h2 className="text-3xl font-bold mb-8 text-center pb-2 flex items-center justify-center gap-2">
         <span>✨</span> Skills
