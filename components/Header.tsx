@@ -46,10 +46,7 @@ export default function Header() {
       
       <div className="flex flex-wrap justify-center items-center gap-6 mb-6 text-white">
         <p className="flex items-center gap-2">
-          <span className="text-accent-1">📍</span> Chipledhunga - 9, Pokhara, Kaski, Nepal
-        </p>
-        <p className="flex items-center gap-2">
-          <span className="text-accent-1">📞</span> +977 9846359074
+          <span className="text-accent-1">📍</span> Pokhara - 9, Kaski, Nepal
         </p>
         <p className="flex items-center gap-2">
           <span className="text-accent-1">📧</span> sarun.hirachan@gmail.com
