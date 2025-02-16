@@ -2,10 +2,6 @@
 
 import { motion } from "framer-motion"
 
-"use client"
-
-import { motion } from "framer-motion"
-
 const education = [
   {
     school: "Motherland Secondary School",
