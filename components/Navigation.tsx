@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, BriefcaseIcon, GraduationCap, Heart, Sparkles } from 'lucide-react'
 
 const navItems = [
   { name: "Skills", icon: "✨", href: "#skills" },
