@@ -21,9 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans min-h-screen bg-background text-foreground">
+      <body className="font-sans min-h-screen bg-[#121212] text-white">
         <Navigation />
-        {children}
+        <main className="container mx-auto px-4 py-24">
+          {children}
+        </main>
       </body>
     </html>
   )
