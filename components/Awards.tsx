@@ -54,7 +54,7 @@ export default function Awards() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-[#242424] hover:bg-[#333] transition-colors duration-200 p-4 rounded-lg"
+            className="bg-[#242424] hover:bg-[#333] transition-colors duration-200 p-4 rounded-xl"
           >
             <div className="flex items-start gap-3">
               <span className="text-xl p-2">{award.emoji}</span>
