@@ -20,7 +20,7 @@ export default function Navigation() {
     }
   }
 
-  return (
+return (
     <motion.nav 
       initial={{ opacity: 0, y: -20 }} 
       animate={{ opacity: 1, y: 0 }} 
@@ -32,12 +32,12 @@ export default function Navigation() {
             key={item.name}
             href={item.href}
             onClick={(e) => scrollToSection(e, item.href)}
-            className="group relative flex items-center justify-center w-10 h-10 rounded-lg hover:bg-[#333] transition-colors"
+            className="group relative flex items-center justify-center w-10 h-10 rounded-xl hover:bg-[#333] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-xl">{item.icon}</span>
-            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1.5 rounded-lg bg-[#333] text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1.5 rounded-xl bg-[#333] text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
               {item.name}
             </span>
           </motion.a>
