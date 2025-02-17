@@ -27,9 +27,9 @@
 }
 
 @layer base {
-  html {
+ html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 6rem;
   }
   
   * {
@@ -37,13 +37,13 @@
   }
   
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#121212];
   }
   
   section {
     @apply scroll-mt-24;
   }
-
+    
   h1 {
     @apply text-3xl font-bold;
   }
