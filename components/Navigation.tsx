@@ -22,24 +22,24 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      initial={{ opacity: 0, x: 20 }} 
-      animate={{ opacity: 1, x: 0 }} 
-      className="fixed top-4 right-4 z-50 flex flex-col items-end gap-2"
+      initial={{ opacity: 0, y: -20 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50"
     >
-      <div className="flex flex-col items-end gap-2 p-2 rounded-lg bg-background/80 backdrop-blur-sm border">
+      <div className="flex items-center gap-2 p-2 rounded-xl bg-[#1a1a1a]/90 backdrop-blur-sm border border-[#333]">
         {navItems.map((item) => (
           <motion.a
             key={item.name}
             href={item.href}
             onClick={(e) => scrollToSection(e, item.href)}
-            className="group flex items-center gap-2 p-2 rounded-md hover:bg-accent transition-colors"
+            className="group relative flex items-center gap-2 p-2 rounded-lg hover:bg-[#333] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+            <item.icon className="h-5 w-5" />
+            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-2 py-1 rounded-md bg-[#333] text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
               {item.name}
             </span>
-            <item.icon className="h-5 w-5" />
           </motion.a>
         ))}
       </div>
