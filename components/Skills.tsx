@@ -33,7 +33,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-[#242424] hover:bg-[#333] transition-colors duration-200 p-4 rounded-lg flex items-center gap-3"
+            className="bg-[#242424] hover:bg-[#333] transition-colors duration-200 p-4 rounded-xl flex items-center gap-3"
           >
             <span className="text-xl">{skill.emoji}</span>
             <span className="text-sm sm:text-base">{skill.name}</span>
