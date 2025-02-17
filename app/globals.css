@@ -29,7 +29,7 @@
 @layer base {
  html {
     scroll-behavior: smooth;
-    scroll-padding-top: 10px;
+    scroll-padding-top: 2rem;
   }
   
   * {
@@ -41,7 +41,7 @@
   }
   
   section {
-    @apply scroll-mt-24;
+    @apply scroll-mt-8;
   }
     
   h1 {
@@ -59,6 +59,23 @@
   p {
     @apply text-base;
   }
+}
+
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
 }
 
 .wave {
