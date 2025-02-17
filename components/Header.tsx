@@ -18,8 +18,8 @@ export default function Header() {
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
+       initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="mb-12 px-4 sm:px-6 lg:px-8 text-center"
     >
@@ -70,7 +70,7 @@ export default function Header() {
         </a>
       </div>
 
-      <div className="max-w-2xl mx-auto bg-[#1a1a1a] p-6 sm:p-8 rounded-xl">
+      <div className="max-w-2xl mx-auto px-4">
         <p className="text-sm sm:text-base leading-relaxed">
           I am a passionate and curious individual with a strong interest in technology, innovation, and entrepreneurship.
           With experience in programming, event organizing, and leadership, I excel at problem-solving and adapting to new
@@ -78,6 +78,6 @@ export default function Header() {
           effectively and create meaningful impact. I am always eager to learn, grow, and take on new opportunities.
         </p>
       </div>
-  </motion.header>
+    </motion.header>
 )
 }
