@@ -88,8 +88,8 @@ export default function Experience() {
     id="experience"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ duration: 0.5, delay: 0.4 }}
-    className="mb-12 p-8 rounded-lg shadow-lg bg-card"
+    transition={{ duration: 0.5, delay: 0.2 }}
+    className="mb-12 p-8 rounded-2xl bg-[#1a1a1a]"
   >
     <h2 className="text-center pb-2 flex items-center justify-center gap-2">
       <span>💼</span> Experience
@@ -101,7 +101,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
-          className="bg-secondary p-4 rounded-md hover:bg-accent transition-colors"
+          className="bg-[#242424] hover:bg-[#333] transition-colors duration-200 p-4 rounded-xl flex items-center gap-3"
         >
           <div className="flex items-start gap-3">
             <span className="p-2 mt-1">{exp.emoji}</span>
