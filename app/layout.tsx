@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Sarun Hirachan - Resume",
   description: "Professional resume of Sarun Hirachan",
+  icons: {
+    icon: "/logo.png",
+  },
 }
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className="font-sans min-h-screen bg-[#121212] text-white">
         <Navigation />
-        <main className="container mx-auto px-4 py-24">
+        <main className="container mx-auto px-4 py-8">
           {children}
         </main>
       </body>
