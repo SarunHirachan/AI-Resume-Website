@@ -31,8 +31,8 @@ export default function Education() {
       id="education"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
-      className="mb-12 p-8 rounded-lg shadow-lg bg-card/80 backdrop-blur-sm"
+      transition={{ duration: 0.5, delay: 0.4 }}
+      className="mb-12 p-8 rounded-lg shadow-lg bg-card"
     >
       <h2 className="text-2xl font-bold mb-6 text-center pb-2 flex items-center justify-center gap-2">
         <span>🎓</span> Education
@@ -44,7 +44,7 @@ export default function Education() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-secondary p-4 rounded-md"
+            className="bg-secondary p-4 rounded-md hover:bg-accent transition-colors"
           >
             <div className="flex items-start gap-3">
               <span className="p-2 mt-1">{edu.emoji}</span>
