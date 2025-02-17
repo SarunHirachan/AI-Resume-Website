@@ -83,38 +83,38 @@ const sortedExperiences = [...experiences].sort((a, b) => {
 })
 
 export default function Experience() {
-  return (
-    <motion.section
-      id="experience"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
-      className="mb-12 p-8 rounded-lg shadow-lg bg-card/80 backdrop-blur-sm"
-    >
-      <h2 className="text-2xl font-bold mb-6 text-center pb-2 flex items-center justify-center gap-2">
-        <span>💼</span> Experience
-      </h2>
-      <div className="space-y-6">
-        {sortedExperiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-secondary p-4 rounded-md"
-          >
-            <div className="flex items-start gap-3">
-              <span className="p-2 mt-1">{exp.emoji}</span>
-              <div className="space-y-2 flex-1">
-                <h3 className="text-xl font-semibold">{exp.title}</h3>
-                <p className="text-accent-foreground">{exp.company}</p>
-                <p className="text-sm text-muted-foreground">{exp.duration}</p>
-                <p>{exp.description}</p>
-              </div>
+ return (
+  <motion.section
+    id="experience"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
+    className="mb-12 p-8 rounded-lg shadow-lg bg-card"
+  >
+    <h2 className="text-center pb-2 flex items-center justify-center gap-2">
+      <span>💼</span> Experience
+    </h2>
+    <div className="space-y-6">
+      {sortedExperiences.map((exp, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className="bg-secondary p-4 rounded-md hover:bg-accent transition-colors"
+        >
+          <div className="flex items-start gap-3">
+            <span className="p-2 mt-1">{exp.emoji}</span>
+            <div className="space-y-2 flex-1">
+              <h3>{exp.title}</h3>
+              <p className="text-accent-foreground">{exp.company}</p>
+              <p className="text-sm text-muted-foreground">{exp.duration}</p>
+              <p>{exp.description}</p>
             </div>
-          </motion.div>
-        ))}
-      </div>
-    </motion.section>
-  )
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </motion.section>
+)
 }
