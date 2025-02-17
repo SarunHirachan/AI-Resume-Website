@@ -43,7 +43,7 @@ export default function Header() {
         Sarun Hirachan <span className="wave">👋</span>
       </h1>
 
-      <p className="text-lg sm:text-xl mb-6">Student Developer</p>
+      <p className="text-lg sm:text-xl mb-6">Student </p>
 
       <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-8">
         <p className="flex items-center gap-2 text-sm sm:text-base">
