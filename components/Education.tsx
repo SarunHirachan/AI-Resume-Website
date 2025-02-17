@@ -32,9 +32,9 @@ export default function Education() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="mb-12 p-8 rounded-2xl bg-[#1a1a1a]"
+      className="mb-12 p-6 sm:p-8 rounded-xl bg-[#1a1a1a]"
     >
-      <h2 className="text-2xl font-bold mb-6 text-center pb-2 flex items-center justify-center gap-2">
+      <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center pb-2 flex items-center justify-center gap-2">
         <span>🎓</span> Education
       </h2>
       <div className="space-y-6">
