@@ -11,7 +11,7 @@ const skills = [
   { name: "Leadership", emoji: "🚀" },
   { name: "Article Writing & Research", emoji: "📝" },
   { name: "Event Organizing", emoji: "📅" },
-  { name: "Scouting", emoji: "🏕️" },
+  { name: "Scouting", emoji: "🏕️" }
 ]
 
 export default function Skills() {
@@ -26,7 +26,7 @@ export default function Skills() {
       <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center pb-2 flex items-center justify-center gap-2">
         <span className="text-2xl">✨</span> Skills
       </h2>
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
