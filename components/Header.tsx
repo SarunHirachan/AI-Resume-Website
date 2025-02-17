@@ -21,7 +21,7 @@ export default function Header() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="mb-12 bg-[#1a1a1a] p-8 rounded-2xl"
+      className="mb-12 p-8 text-center"
     >
     
       <div className="greeting-container h-16 mb-6">
@@ -70,7 +70,7 @@ export default function Header() {
       </a>
     </div>
 
-    <div className="max-w-3xl mx-auto bg-[#242424] p-6 rounded-xl">
+    <div className="max-w-2xl mx-auto px-6">
         <p className="leading-relaxed">
           I am a passionate and curious individual with a strong interest in technology, innovation, and entrepreneurship.
           With experience in programming, event organizing, and leadership, I excel at problem-solving and adapting to new
