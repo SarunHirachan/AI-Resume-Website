@@ -3,15 +3,15 @@
 import { motion } from "framer-motion"
 
 const skills = [
-  { name: "Web Development (HTML, CSS, JS)", emoji: "🌐" },
+  { name: "Web Development (HTML, CSS, JavaScript)", emoji: "🌐" },
   { name: "Python Programming", emoji: "🐍" },
   { name: "GitHub", emoji: "🐙" },
   { name: "PowerPoint", emoji: "📊" },
   { name: "Canva", emoji: "🎨" },
   { name: "Leadership", emoji: "🚀" },
   { name: "Article Writing & Research", emoji: "📝" },
-  { name: "Event Organizing", emoji: "📅" },
-  { name: "Scouting", emoji: "🏕️" }
+  { name: "Event Organization", emoji: "📅" },
+  { name: "Problem-solving", emoji: "🧩" }
 ]
 
 export default function Skills() {
