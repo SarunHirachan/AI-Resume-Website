@@ -19,21 +19,6 @@ const education = [
       "SEE (Secondary Education Examination) with distinction. Participated in various academic and extracurricular activities.",
     emoji: "📚",
   },
-  {
-    school: "DataCamp",
-    degree: "Data Science & Programming Courses",
-    duration: "December 2024 - Present",
-    description:
-      "Pursuing comprehensive courses in data science, programming, and technology through DataCamp's premium subscription program.",
-    emoji: "💻",
-  },
-  {
-    school: "Digital Rights School",
-    degree: "Digital Rights and Safety Training",
-    duration: "July 2024",
-    description: "Completed intensive training on digital rights, online safety, and cyber security.",
-    emoji: "🔒",
-  },
 ]
 
 const sortedEducation = [...education].sort((a, b) => {
