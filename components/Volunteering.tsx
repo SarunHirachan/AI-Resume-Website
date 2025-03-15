@@ -22,7 +22,7 @@ const volunteeringExperiences = [
     organization: "MY-MUN 2024",
     duration: "September 6–7, 2024",
     description:
-      "Served as Co-Chair for committee proceedings, collaborated with leadership to guide delegates, and ensured productive and structured discussions on gender equality issues.",
+      "Served as Co-Chair for committee proceedings, facilitated diplomatic discussions, and coordinated with leadership to maintain protocol and ensure productive dialogue on international policy topics.",
     emoji: "🌐",
   },
   {
