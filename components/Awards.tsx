@@ -6,7 +6,7 @@ const awards = [
   {
     title: "Certificate of Merit, 19th Safal Pokhara International Marathon 2025",
     issuer: "21km Half Marathon",
-    date: "January 2025",
+    date: "February 2025",
     emoji: "🏃",
   },
   {
