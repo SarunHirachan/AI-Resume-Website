@@ -26,24 +26,6 @@ const awards = [
     issuer: "dpHackathon 1.0, Digital Pathshala",
     date: "December 2023",
     emoji: "🏆",
-  },
-  {
-    title: "Certificate of Achievement",
-    issuer: "Nepal Scouts Basic Course",
-    date: "July 2023",
-    emoji: "📜",
-  },
-  {
-    title: "Best Delegate",
-    issuer: "School Level Model UN, Innovation Club Motherland",
-    date: "June 2023",
-    emoji: "🎯",
-  },
-  {
-    title: "Leadership Excellence",
-    issuer: "Innovation Club Motherland",
-    date: "May 2023",
-    emoji: "👑",
   }
 ]
 
