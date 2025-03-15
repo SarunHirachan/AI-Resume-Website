@@ -7,14 +7,14 @@ const volunteeringExperiences = [
     title: "Volunteer",
     organization: "Youth Thinkers' Society Pokhara",
     duration: "September 2024 - Present",
-    description: "Assist in organizing Model UN conferences and youth empowerment programs.",
+    description: "Assist in organizing Model UN conferences and facilitate youth empowerment programs aimed at developing critical thinking and leadership skills.",
     emoji: "🤝",
   },
   {
     title: "Content Creator",
     organization: "SEE Ko Guide",
     duration: "August 2024 - Present",
-    description: "Develop educational PowerPoints and YouTube videos for SEE exam preparation.",
+    description: "Develop educational PowerPoint presentations and produce YouTube video content for Secondary Education Examination preparation, helping students master key concepts.",
     emoji: "🎥",
   },
   {
@@ -22,15 +22,22 @@ const volunteeringExperiences = [
     organization: "MY-MUN 2024",
     duration: "September 6–7, 2024",
     description:
-      "Served as Co-Chair of the UN-WOMEN Committee at MY-MUN 2024, assisting in committee proceedings. Collaborated with the Chair to guide delegates and ensure smooth discussions.",
+      "Served as Co-Chair for committee proceedings, collaborated with leadership to guide delegates, and ensured productive and structured discussions on gender equality issues.",
     emoji: "🌐",
   },
   {
     title: "Service Team Rover",
     organization: "2nd Adventure Fest",
     duration: "June 15–24, 2024",
-    description: "Provided logistical support for a Nepal Scouts Gandaki Province event.",
+    description: "Provided comprehensive logistical support for a major Nepal Scouts Gandaki Province event, ensuring smooth operations and participant satisfaction.",
     emoji: "🏕️",
+  },
+  {
+    title: "Member",
+    organization: "Nepal Scouts, Milan Scout Crew",
+    duration: "June 2023 - Present",
+    description: "Actively volunteer in community service initiatives, participate in training sessions and camps, and contribute to projects that address local community needs.",
+    emoji: "⚜️",
   }
 ]
 
