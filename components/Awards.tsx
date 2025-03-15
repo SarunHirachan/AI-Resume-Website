@@ -4,16 +4,16 @@ import { motion } from "framer-motion"
 
 const awards = [
   {
+    title: "Certificate of Merit, 19th Safal Pokhara International Marathon 2025",
+    issuer: "21km Half Marathon",
+    date: "January 2025",
+    emoji: "🏃",
+  },
+  {
     title: "Outstanding Participation Award",
     issuer: "6th Training Camp, Nepal Scouts Gandaki Province, Milan Scout Crew",
     date: "August 2024",
     emoji: "🏅",
-  },
-  {
-    title: "Eco Delegate Showcase Representative",
-    issuer: "3rd Virtual Green Fest, Notre Dame Nature Study Club",
-    date: "June 2024",
-    emoji: "🌿",
   },
   {
     title: "Best Position Paper",
@@ -26,6 +26,24 @@ const awards = [
     issuer: "dpHackathon 1.0, Digital Pathshala",
     date: "December 2023",
     emoji: "🏆",
+  },
+  {
+    title: "Certificate of Achievement",
+    issuer: "Nepal Scouts Basic Course",
+    date: "July 2023",
+    emoji: "📜",
+  },
+  {
+    title: "Best Delegate",
+    issuer: "School Level Model UN, Innovation Club Motherland",
+    date: "June 2023",
+    emoji: "🎯",
+  },
+  {
+    title: "Leadership Excellence",
+    issuer: "Innovation Club Motherland",
+    date: "May 2023",
+    emoji: "👑",
   }
 ]
 
