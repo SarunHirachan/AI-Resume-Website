@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
 
 const greetings = ["Hello", "Hola", "你好", "नमस्ते", "مرحبًا", "Bonjour"]
 
@@ -11,19 +11,18 @@ export default function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGreeting((prev) => (prev + 1) % greetings.length)
-    }, 2000) // Change greeting every 2 seconds
+    }, 2000)
 
     return () => clearInterval(interval)
   }, [])
 
   return (
     <motion.header
-       initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="mb-12 px-4 sm:px-6 lg:px-8 text-center"
     >
-    
       <div className="greeting-container h-16 mb-6">
         <AnimatePresence mode="wait">
           <motion.h2
@@ -32,18 +31,18 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-white"
+            className="text-3xl font-bold"
           >
             {greetings[currentGreeting]}
           </motion.h2>
         </AnimatePresence>
       </div>
 
-    <h1 className="text-2xl sm:text-3xl font-bold mb-4">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4">
         Sarun Hirachan <span className="wave">👋</span>
       </h1>
 
-      <p className="text-lg sm:text-xl mb-6">Student </p>
+      <p className="text-lg sm:text-xl mb-6">Student Developer</p>
 
       <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-8">
         <p className="flex items-center gap-2 text-sm sm:text-base">
@@ -72,12 +71,9 @@ export default function Header() {
 
       <div className="max-w-2xl mx-auto px-4">
         <p className="text-sm sm:text-base leading-relaxed">
-          I am a passionate and curious individual with a strong interest in technology, innovation, and entrepreneurship.
-          With experience in programming, event organizing, and leadership, I excel at problem-solving and adapting to new
-          challenges. Through hands-on projects and strategic roles, I have developed the skills to execute ideas
-          effectively and create meaningful impact. I am always eager to learn, grow, and take on new opportunities.
+          I am a passionate and curious individual with a strong interest in technology, innovation, and entrepreneurship. With experience in programming, event organizing, and leadership, I excel at problem-solving and adapting to new challenges. Through hands-on projects and strategic roles, I have developed the skills to execute ideas effectively and create meaningful impact. I am always eager to learn, grow, and take on new opportunities.
         </p>
       </div>
     </motion.header>
-)
+  )
 }
