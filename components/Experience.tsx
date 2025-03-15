@@ -8,7 +8,7 @@ const experiences = [
     company: "Data Fellowship 2024",
     duration: "December 2024 - Present",
     description:
-      "Awarded a prestigious year-long premium DataCamp subscription ($500 value) through DataCamp Donate and Sunway Student Representative Council. Engaged in advanced data science, AI, and technology courses.",
+      "Recipient of prestigious year-long premium DataCamp subscription ($500 value). Engaged in advanced data science, artificial intelligence, and technology coursework.",
     emoji: "📊",
   },
   {
@@ -16,7 +16,7 @@ const experiences = [
     company: "Nobel Navigators",
     duration: "November 2024 - Present",
     description:
-      "Trained in web design, pitch/presentation development, internet troubleshooting, and leadership through an online internship program.",
+      "Received comprehensive training in web design and development. Developed pitch/presentation skills and technical troubleshooting capabilities.",
     emoji: "🎓",
   },
   {
@@ -24,7 +24,7 @@ const experiences = [
     company: "Eureka Organization",
     duration: "September 2024 - Present",
     description:
-      "Founded a youth-led organization focused on technology, innovation, and self-development for youths and students. Led workshops, campaigns, and events to empower youth, establishing an executive team of eight members.",
+      "Founded and led a youth-focused organization centered on technology and innovation. Established an eight-member executive team and orchestrated workshops and campaigns.",
     emoji: "💡",
   },
   {
@@ -32,7 +32,7 @@ const experiences = [
     company: "Interact Club of Pokhara Lakeside",
     duration: "July 2024 - Present",
     description:
-      "Manage technical operations for events, ensuring seamless execution of programs. Coordinate and lead activities, and programs beyond technical operations.",
+      "Manage technical operations for events ensuring seamless execution. Coordinate and lead activities and programs beyond technical responsibilities.",
     emoji: "🖥️",
   },
   {
@@ -40,30 +40,15 @@ const experiences = [
     company: "Digital Rights Nepal",
     duration: "July 2024 - Present",
     description:
-      "Completed a two-day in-person workshop on Digital Rights and Safety. An active member of the Digital Rights Advocate Network Gandaki, promoting digital literacy and online safety.",
+      "Completed specialized training in digital rights and safety. Active member of Digital Rights Advocate Network Gandaki promoting digital literacy.",
     emoji: "🔒",
   },
   {
-    title: "Member",
-    company: "LOFA Pokhara",
-    duration: "January 2024 - Present",
-    description: "Actively participate in events and programs organized by LOFA Pokhara.",
-    emoji: "🤝",
-  },
-  {
-    title: "Rover",
-    company: "Nepal Scouts, Milan Scout Crew",
-    duration: "June 2023 - Present",
-    description:
-      "Actively volunteer and participate in Nepal Scouts events, training sessions, camps, and community service projects.",
-    emoji: "🏕️",
-  },
-  {
-    title: "Community Leader (Nepal Community)",
+    title: "Community Leader",
     company: "Hand in Hand Global NGO",
     duration: "August 2024 - November 2024",
     description:
-      "Coordinated community-building initiatives under the NGO's guidance, fostering collaboration and local engagement.",
+      "Coordinated community-building initiatives fostering collaboration and local engagement.",
     emoji: "🌏",
   },
   {
@@ -71,9 +56,9 @@ const experiences = [
     company: "Innovation Club Motherland",
     duration: "May 2023 - June 2024",
     description:
-      "Led club activities, organized tech workshops, and mentored members in computer science fundamentals.",
+      "Led club activities and organized technical workshops. Mentored members in computer science fundamentals.",
     emoji: "💻",
-  }
+  },
 ]
 
 const sortedExperiences = [...experiences].sort((a, b) => {
