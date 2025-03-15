@@ -44,6 +44,21 @@ const experiences = [
     emoji: "🔒",
   },
   {
+  title: "Member",
+  company: "LOFA Pokhara",
+  duration: "January 2024 - Present",
+  description: "Actively participate in events and programs organized by LOFA Pokhara.",
+  emoji: "🤝",
+},
+  {
+  title: "Rover",
+  company: "Nepal Scouts, Milan Scout Crew",
+  duration: "June 2023 - Present",
+  description:
+    "Actively volunteer and participate in Nepal Scouts events, training sessions, camps, and community service projects.",
+  emoji: "🏕️",
+},
+  {
     title: "Community Leader",
     company: "Hand in Hand Global NGO",
     duration: "August 2024 - November 2024",
