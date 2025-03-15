@@ -29,15 +29,8 @@ const volunteeringExperiences = [
     title: "Service Team Rover",
     organization: "2nd Adventure Fest",
     duration: "June 15–24, 2024",
-    description: "Provided comprehensive logistical support for a major Nepal Scouts Gandaki Province event, ensuring smooth operations and participant satisfaction.",
+    description: "Volunteered as a Rover in the service team for the 2nd Adventure Fest, assisting in building camps and activity bases for the event organized by Nepal Scouts Gandaki Province and Milan Scout Crew.",
     emoji: "🏕️",
-  },
-  {
-    title: "Member",
-    organization: "Nepal Scouts, Milan Scout Crew",
-    duration: "June 2023 - Present",
-    description: "Actively volunteer in community service initiatives, participate in training sessions and camps, and contribute to projects that address local community needs.",
-    emoji: "⚜️",
   }
 ]
 
