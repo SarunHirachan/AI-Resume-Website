@@ -7,16 +7,33 @@ const education = [
     school: "Motherland Secondary School",
     degree: "SLC (School Leaving Certificate), Management",
     duration: "June 2022 - August 2024",
-    description: "Completed secondary education with a focus on Management studies. Actively participated in extracurricular activities and leadership roles.",
+    description:
+      "Actively participated in leadership roles and extracurricular activities.",
     emoji: "🎓",
   },
   {
     school: "Shishu Niketan Secondary English School",
     degree: "SEE (Secondary Education Examination)",
     duration: "April 2009 - March 2022",
-    description: "Completed basic education with distinction. Participated in various academic and extracurricular activities.",
+    description:
+      "SEE (Secondary Education Examination) with distinction. Participated in various academic and extracurricular activities.",
     emoji: "📚",
-  }
+  },
+  {
+    school: "DataCamp",
+    degree: "Data Science & Programming Courses",
+    duration: "December 2024 - Present",
+    description:
+      "Pursuing comprehensive courses in data science, programming, and technology through DataCamp's premium subscription program.",
+    emoji: "💻",
+  },
+  {
+    school: "Digital Rights School",
+    degree: "Digital Rights and Safety Training",
+    duration: "July 2024",
+    description: "Completed intensive training on digital rights, online safety, and cyber security.",
+    emoji: "🔒",
+  },
 ]
 
 const sortedEducation = [...education].sort((a, b) => {
