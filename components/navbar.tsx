@@ -50,6 +50,16 @@ export default function Navbar() {
           </div>
           <span className="ml-3 text-white font-semibold text-lg">Sarun Hirachan</span>
         </div>
+
+        <div className="h-10 w-10 rounded-lg overflow-hidden logo-pulse">
+  <Image 
+    src="/logo.png" 
+    alt="Sarun Hirachan Logo" 
+    width={40} 
+    height={40}
+    className="object-cover"
+  />
+</div>
         
         <div className="hidden md:flex space-x-6">
           {navItems.map((item) => (
