@@ -139,3 +139,19 @@ section {
   height: 2px;
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
 }
+
+  @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+.logo-pulse {
+  animation: pulse 2s infinite;
+}
