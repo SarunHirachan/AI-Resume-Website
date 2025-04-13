@@ -5,8 +5,8 @@ import { useEffect, useState } from "react"
 import { FiMenu, FiX } from "react-icons/fi"
 
 interface NavItem {
-  name: string;
-  href: string;
+  name: string
+  href: string
 }
 
 const navItems: NavItem[] = [
@@ -104,9 +104,9 @@ export default function Navigation() {
 }
 
 interface NavLinkProps {
-  item: NavItem;
-  scrollToSection: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
-  mobile?: boolean;
+  item: NavItem
+  scrollToSection: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void
+  mobile?: boolean
 }
 
 const NavLink = ({ item, scrollToSection, mobile = false }: NavLinkProps) => (
