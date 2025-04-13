@@ -27,12 +27,12 @@
 }
 
 main {
-  padding-top: 80px !important;
+  padding-top: 60px !important;
 }
 
 @media (min-width: 768px) {
   main {
-    padding-top: 100px !important;
+    padding-top: 90px !important;
   }
 }
 
@@ -71,8 +71,8 @@ main {
   }
 }
 
-  ::-webkit-scrollbar {
-  width: 6px;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
