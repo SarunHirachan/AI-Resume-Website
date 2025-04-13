@@ -68,7 +68,7 @@ export default function Navigation() {
         />
 
         <div className="container mx-auto px-4 py-3 md:py-4">
-          <div className="flex justify-end items-center"> {/* Right alignment */}
+          <div className="flex justify-between items-center">
             <button
               onClick={toggleMenu}
               className="md:hidden p-2 text-white hover:text-gray-300 transition-colors"
@@ -77,7 +77,7 @@ export default function Navigation() {
               {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
 
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <NavLink key={item.name} item={item} scrollToSection={scrollToSection} />
               ))}
@@ -109,23 +109,17 @@ interface NavLinkProps {
 
 const NavLink = ({ item, scrollToSection, mobile = false }: NavLinkProps) => (
   <motion.a
+    href={item.href}
+    onClick={(e) => scrollToSection(e, item.href)}
     className={`relative ${
       mobile ? "px-6 py-3 text-lg" : "px-4 py-2 text-base"
-    } font-medium text-white hover:text-gray-200 transition-colors`} // Removed background
+    } font-medium text-white hover:text-gray-200 transition-colors`}
     whileHover={{ 
       scale: 1.05,
       transition: { type: "spring", stiffness: 300, damping: 10 }
     }}
     whileTap={{ scale: 0.95 }}
   >
-    
     <span className="relative z-10">{item.name}</span>
-    <motion.span
-      className="absolute inset-0 bg-white/5 rounded-lg z-0"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 400, damping: 20 }}
-      style={{ originX: 0.5, originY: 0.5 }}
-    />
   </motion.a>
 )
