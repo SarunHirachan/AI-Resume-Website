@@ -60,15 +60,15 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 left-0 right-0 z-40 bg-black/50 backdrop-blur-lg border-b border-white/10"
+        className="fixed top-0 left-0 right-0 z-40 bg-black/60 backdrop-blur-xl"
       >
         <motion.div
-          className="absolute bottom-[-1px] left-0 right-0 h-[3px] bg-white/50 origin-left z-50"
+          className="absolute bottom-[-1px] left-0 right-0 h-[4px] bg-white origin-left z-50"
           style={{ scaleX }}
         />
 
         <div className="container mx-auto px-4 py-3 md:py-4">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-end items-center"> {/* Right alignment */}
             <button
               onClick={toggleMenu}
               className="md:hidden p-2 text-white hover:text-gray-300 transition-colors"
@@ -109,17 +109,16 @@ interface NavLinkProps {
 
 const NavLink = ({ item, scrollToSection, mobile = false }: NavLinkProps) => (
   <motion.a
-    href={item.href}
-    onClick={(e) => scrollToSection(e, item.href)}
     className={`relative ${
       mobile ? "px-6 py-3 text-lg" : "px-4 py-2 text-base"
-    } font-medium text-white hover:text-gray-100 transition-colors`}
+    } font-medium text-white hover:text-gray-200 transition-colors`} // Removed background
     whileHover={{ 
       scale: 1.05,
       transition: { type: "spring", stiffness: 300, damping: 10 }
     }}
     whileTap={{ scale: 0.95 }}
   >
+    
     <span className="relative z-10">{item.name}</span>
     <motion.span
       className="absolute inset-0 bg-white/5 rounded-lg z-0"
