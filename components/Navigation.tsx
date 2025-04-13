@@ -28,21 +28,10 @@ export default function Navigation() {
   })
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (window.innerWidth < 768 && !(e.target as HTMLElement).closest('nav')) {
-        setIsMenuOpen(false)
-      }
-    }
-
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       setIsScrolled(latest > 0)
     })
-
-    document.addEventListener('click', handleClickOutside)
-    return () => {
-      unsubscribe()
-      document.removeEventListener('click', handleClickOutside)
-    }
+    return () => unsubscribe()
   }, [scrollYProgress])
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -71,10 +60,10 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-xl border-b border-white/10"
+        className="fixed top-0 left-0 right-0 z-40 bg-black/50 backdrop-blur-lg border-b border-white/10"
       >
         <motion.div
-          className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-white/50 origin-left z-50"
+          className="absolute bottom-[-1px] left-0 right-0 h-[3px] bg-white/50 origin-left z-50"
           style={{ scaleX }}
         />
 
@@ -88,7 +77,7 @@ export default function Navigation() {
               {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
 
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               {navItems.map((item) => (
                 <NavLink key={item.name} item={item} scrollToSection={scrollToSection} />
               ))}
@@ -124,7 +113,7 @@ const NavLink = ({ item, scrollToSection, mobile = false }: NavLinkProps) => (
     onClick={(e) => scrollToSection(e, item.href)}
     className={`relative ${
       mobile ? "px-6 py-3 text-lg" : "px-4 py-2 text-base"
-    } font-medium text-white hover:text-gray-300 transition-colors`}
+    } font-medium text-white hover:text-gray-100 transition-colors`}
     whileHover={{ 
       scale: 1.05,
       transition: { type: "spring", stiffness: 300, damping: 10 }
@@ -133,10 +122,10 @@ const NavLink = ({ item, scrollToSection, mobile = false }: NavLinkProps) => (
   >
     <span className="relative z-10">{item.name}</span>
     <motion.span
-      className="absolute inset-0 bg-white/10 rounded-lg z-0"
+      className="absolute inset-0 bg-white/5 rounded-lg z-0"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      transition={{ type: "spring", stiffness: 400, damping: 20 }}
       style={{ originX: 0.5, originY: 0.5 }}
     />
   </motion.a>
