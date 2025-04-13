@@ -62,7 +62,7 @@
   "@emotion/is-prop-valid": "^1.2.1",
   "tailwindcss": "^3.4.1",
   "framer-motion": "^10.16.4"
-}
+},
   "resolutions": {
   "date-fns": "^2.30.0"
 },
