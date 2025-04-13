@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion"
 import { useEffect, useState } from "react"
-import { FiMenu, FiX } from "react-icons/fi" // Corrected import path
+import { FiMenu, FiX } from "react-icons/fi" // Was trying to import from non-existent 'ff'
 
 interface NavItem {
   name: string
@@ -37,8 +37,8 @@ export default function Navigation() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
-    if (typeof window === 'undefined') return
+  e.preventDefault()
+  if (typeof window === 'undefined') return // Add this line
 
     const element = document.querySelector(href)
     if (element) {
