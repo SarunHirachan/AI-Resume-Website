@@ -26,6 +26,16 @@
   }
 }
 
+main {
+  padding-top: 80px !important;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-top: 100px !important;
+  }
+}
+
 @layer base {
  html {
     scroll-behavior: smooth;
@@ -62,16 +72,16 @@
 }
 
   ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: #1a1a1a;
 }
-
+  
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 5px;
+  background: #ffffff30;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
