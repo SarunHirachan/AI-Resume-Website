@@ -24,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      </head>
       <body className="font-sans min-h-screen bg-[#121212] text-white">
         <Navigation />
         <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
