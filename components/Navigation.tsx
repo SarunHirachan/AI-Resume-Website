@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion"
 import { useEffect, useState } from "react"
-import { FiMenu, FiX } from "react-icons/fi"
+import { FiMenu, FiX } from "react-icons/fi" // Corrected import path
 
 interface NavItem {
   name: string
