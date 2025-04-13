@@ -4,7 +4,12 @@ import { motion, useScroll, useSpring } from "framer-motion"
 import { useEffect, useState } from "react"
 import { FiMenu, FiX } from "react-icons/fi"
 
-const navItems = [
+interface NavItem {
+  name: string;
+  href: string;
+}
+
+const navItems: NavItem[] = [
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Volunteering", href: "#volunteering" },
@@ -33,6 +38,8 @@ export default function Navigation() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
+    if (typeof window === 'undefined') return
+
     const element = document.querySelector(href)
     if (element) {
       const headerOffset = window.innerWidth > 768 ? 80 : 60
@@ -49,7 +56,6 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Navigation Bar */}
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -58,7 +64,6 @@ export default function Navigation() {
           isScrolled ? "shadow-lg" : ""
         }`}
       >
-        {/* Scroll Progress Bar - Now positioned below nav */}
         <motion.div
           className="absolute bottom-[-2px] left-0 right-0 h-1 bg-white/30 origin-left z-50"
           style={{ scaleX }}
@@ -69,19 +74,18 @@ export default function Navigation() {
             <button
               onClick={toggleMenu}
               className="md:hidden p-2 text-white hover:text-gray-300 transition-colors"
+              aria-label="Toggle navigation menu"
             >
               {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
-                <NavLink item={item} scrollToSection={scrollToSection} key={item.name} />
+                <NavLink key={item.name} item={item} scrollToSection={scrollToSection} />
               ))}
             </div>
           </div>
 
-          {/* Mobile Navigation */}
           <motion.div
             className={`md:hidden overflow-hidden ${
               isMenuOpen ? "max-h-screen" : "max-h-0"
@@ -89,7 +93,7 @@ export default function Navigation() {
           >
             <div className="flex flex-col items-center gap-4 pt-4 pb-6">
               {navItems.map((item) => (
-                <NavLink item={item} scrollToSection={scrollToSection} key={item.name} mobile />
+                <NavLink key={item.name} item={item} scrollToSection={scrollToSection} mobile />
               ))}
             </div>
           </motion.div>
@@ -99,7 +103,13 @@ export default function Navigation() {
   )
 }
 
-const NavLink = ({ item, scrollToSection, mobile = false }) => (
+interface NavLinkProps {
+  item: NavItem;
+  scrollToSection: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
+  mobile?: boolean;
+}
+
+const NavLink = ({ item, scrollToSection, mobile = false }: NavLinkProps) => (
   <motion.a
     href={item.href}
     onClick={(e) => scrollToSection(e, item.href)}
