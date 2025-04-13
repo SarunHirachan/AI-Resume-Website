@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion"
 import { useEffect, useState } from "react"
-import { FiMenu, FiX } from "react-icons/fi" // Was trying to import from non-existent 'ff'
+import { FiMenu, FiX } from "react-icons/fi"
 
 interface NavItem {
   name: string
@@ -28,17 +28,28 @@ export default function Navigation() {
   })
 
   useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (window.innerWidth < 768 && !(e.target as HTMLElement).closest('nav')) {
+        setIsMenuOpen(false)
+      }
+    }
+
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       setIsScrolled(latest > 0)
     })
-    return () => unsubscribe()
+
+    document.addEventListener('click', handleClickOutside)
+    return () => {
+      unsubscribe()
+      document.removeEventListener('click', handleClickOutside)
+    }
   }, [scrollYProgress])
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-  e.preventDefault()
-  if (typeof window === 'undefined') return // Add this line
+    e.preventDefault()
+    if (typeof window === 'undefined') return
 
     const element = document.querySelector(href)
     if (element) {
@@ -60,12 +71,10 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className={`fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10 ${
-          isScrolled ? "shadow-lg" : ""
-        }`}
+        className="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-xl border-b border-white/10"
       >
         <motion.div
-          className="absolute bottom-[-2px] left-0 right-0 h-1 bg-white/30 origin-left z-50"
+          className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-white/50 origin-left z-50"
           style={{ scaleX }}
         />
 
