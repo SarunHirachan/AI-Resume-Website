@@ -10,13 +10,13 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { name: "About", href: "#about" }, // New "About" button
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Volunteering", href: "#volunteering" },
   { name: "Awards", href: "#awards" },
   { name: "Education", href: "#education" },
-]
-
+];
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
