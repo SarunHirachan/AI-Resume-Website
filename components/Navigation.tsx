@@ -63,7 +63,7 @@ export default function Navigation() {
         className="fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-xl"
       >
         <motion.div
-          className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-white origin-left z-50"
+          className="absolute bottom-[-1px] left-0 right-0 h-[1px] bg-white origin-left z-50"
           style={{ scaleX }}
         />
 
