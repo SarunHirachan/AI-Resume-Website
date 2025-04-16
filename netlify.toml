@@ -2,14 +2,12 @@
   command = "npm install && npm run build"
   publish = ".next"
 
-[build]
-  environment = { 
-    NODE_VERSION = "18.17.0"
-    NEXT_PUBLIC_SITE_URL = "https://sarunhirachanresume.netlify.app"
-  }
+[build.environment]
+  NODE_VERSION = "18.17.0"
+  NEXT_PUBLIC_SITE_URL = "https://sarunhirachanresume.netlify.app"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[context.production.environment]
-  NEXT_PUBLIC_SITE_URL = "https://sarunhirachanresume.netlify.app"
+[context.production]
+  command = "npm run build"
