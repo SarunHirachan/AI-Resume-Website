@@ -1,10 +1,11 @@
-import AnimatedBackground from "../components/AnimatedBackground"
-import Header from "../components/Header"
-import Skills from "../components/Skills"
-import Experience from "../components/Experience"
-import Volunteering from "../components/Volunteering"
-import Awards from "../components/Awards"
-import Education from "../components/Education"
+import AnimatedBackground from "../components/AnimatedBackground";
+import Header from "../components/Header";
+import About from "../components/About"; // New import
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Volunteering from "../components/Volunteering";
+import Awards from "../components/Awards";
+import Education from "../components/Education";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AnimatedBackground />
       <div className="container mx-auto px-4 py-8 relative z-10">
         <Header />
+        <About /> {/* Added About section */}
         <Skills />
         <Experience />
         <Volunteering />
@@ -19,5 +21,5 @@ export default function Home() {
         <Education />
       </div>
     </main>
-  )
+  );
 }
