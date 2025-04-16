@@ -60,30 +60,35 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 left-0 right-0 z-40 bg-black/60 backdrop-blur-xl"
+        className="fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-xl"
       >
         <motion.div
-          className="absolute bottom-[-1px] left-0 right-0 h-[4px] bg-white origin-left z-50"
+          className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-white origin-left z-50"
           style={{ scaleX }}
         />
 
-        <div className="container mx-auto px-4 py-3 md:py-4">
-          <div className="flex justify-between items-center">
-            <button
-              onClick={toggleMenu}
-              className="md:hidden p-2 text-white hover:text-gray-300 transition-colors"
-              aria-label="Toggle navigation menu"
-            >
-              {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-            </button>
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center">
+            {/* Mobile menu button - left aligned */}
+            <div className="md:hidden">
+              <button
+                onClick={toggleMenu}
+                className="p-2 text-white hover:text-gray-300 transition-colors"
+                aria-label="Toggle navigation menu"
+              >
+                {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              </button>
+            </div>
 
-            <div className="hidden md:flex items-center gap-8">
+            {/* Desktop navigation - right aligned */}
+            <div className="hidden md:flex ml-auto items-center gap-6">
               {navItems.map((item) => (
                 <NavLink key={item.name} item={item} scrollToSection={scrollToSection} />
               ))}
             </div>
           </div>
 
+          {/* Mobile menu dropdown */}
           <motion.div
             className={`md:hidden overflow-hidden ${
               isMenuOpen ? "max-h-screen" : "max-h-0"
