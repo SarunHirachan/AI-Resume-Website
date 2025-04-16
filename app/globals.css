@@ -2,105 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-  }
-}
-
+/* Content spacing */
 main {
-  padding-top: 30px !important;
+  padding-top: 50px !important;
 }
 
 @media (min-width: 768px) {
   main {
-    padding-top: 60px !important;
+    padding-top: 70px !important;
   }
 }
 
-@layer base {
- html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
-  }
-  
-  * {
-    @apply border-border;
-  }
-  
-  body {
-    @apply bg-[#121212];
-  }
-  
-  section {
-    @apply scroll-mt-8;
-  }
-    
-  h1 {
-    @apply text-3xl font-bold;
-  }
-
-  h2 {
-    @apply text-2xl font-bold mb-6;
-  }
-
-  h3 {
-    @apply text-xl font-semibold;
-  }
-
-  p {
-    @apply text-base;
-  }
-}
-
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
   background: #1a1a1a;
 }
-  
+
 ::-webkit-scrollbar-thumb {
   background: #ffffff30;
   border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
-}
-
-.wave {
-  animation: wave 2.5s infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
-
-@keyframes wave {
-  0% { transform: rotate(0.0deg); }
-  10% { transform: rotate(14.0deg); }
-  20% { transform: rotate(-8.0deg); }
-  30% { transform: rotate(14.0deg); }
-  40% { transform: rotate(-4.0deg); }
-  50% { transform: rotate(10.0deg); }
-  60% { transform: rotate(0.0deg); }
-  100% { transform: rotate(0.0deg); }
 }
