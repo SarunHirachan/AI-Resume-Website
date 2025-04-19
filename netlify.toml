@@ -4,7 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "18.17.0"
-  NEXT_PUBLIC_SITE_URL = "https://sarunhirachanresume.netlify.app"
+  NEXTJS_TARGET = "server"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
