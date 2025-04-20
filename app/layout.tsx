@@ -1,39 +1,31 @@
 import { Inter } from 'next/font/google'
-import "./globals.css"
-import type { Metadata } from "next"
+import './globals.css'
+import { ThemeProvider } from '@/context/ThemeContext'
+import Navigation from '@/components/Navigation'
 
-// Server Component (no client-side code)
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter'
 })
 
-export const metadata: Metadata = {
-  title: "Sarun Hirachan - Resume",
-  description: "Professional resume of Sarun Hirachan",
-  icons: {
-    icon: "/logo.png",
-  },
-}
-
-// Client-side wrapper component
-function ClientLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
       <body className="font-sans min-h-screen bg-[#121212] text-white">
-        <Navigation />
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {children}
-        </main>
+        <ThemeProvider>
+          <Navigation />
+          <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )
-}
-
-// Main layout remains server component
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <ClientLayout>{children}</ClientLayout>
 }
