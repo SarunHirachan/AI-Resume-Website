@@ -1,9 +1,8 @@
-import type React from "react"
-import "./globals.css"
 import { Inter } from 'next/font/google'
-import Navigation from "@/components/Navigation"
+import "./globals.css"
 import type { Metadata } from "next"
 
+// Server Component (no client-side code)
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -17,15 +16,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+// Client-side wrapper component
+function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
       <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
       <body className="font-sans min-h-screen bg-[#121212] text-white">
         <Navigation />
@@ -35,4 +31,9 @@ export default function RootLayout({
       </body>
     </html>
   )
+}
+
+// Main layout remains server component
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <ClientLayout>{children}</ClientLayout>
 }
