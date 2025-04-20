@@ -23,14 +23,13 @@ const navItems: NavItem[] = [
   { name: "Education", href: "#education" },
 ];
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { scrollYProgress } = useScroll()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
-  })
+  });
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
