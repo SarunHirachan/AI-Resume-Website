@@ -1,8 +1,11 @@
-'use client' // Add this at very top
+'use client' // MUST BE FIRST LINE
 
-import { motion, useScroll, useSpring } from "framer-motion"
-import { useEffect, useState } from "react"
-import { FiMenu, FiX } from "react-icons/fi"
+import { motion, useScroll, useSpring } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { FiMenu, FiX } from 'react-icons/fi'
+import { useTheme } from '@/context/ThemeContext'
+
+// Rest of your navigation code...
 
 interface NavItem {
   name: string
