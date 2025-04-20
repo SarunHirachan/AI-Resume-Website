@@ -1,18 +1,8 @@
-'use client' // MUST BE FIRST LINE
+'use client';
 
-import { motion, useScroll, useSpring } from "framer-motion"
-import { useEffect, useState } from "react"
-import { FiMenu, FiX } from "react-icons/fi"
-
-// Keep your existing navItems array and other code
-// ... rest of your navigation code remains unchanged
-
-// Rest of your navigation code...
-
-interface NavItem {
-  name: string
-  href: string
-}
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useEffect, useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems: NavItem[] = [
   { name: "About", href: "#about" }, // New "About" button
@@ -22,6 +12,7 @@ const navItems: NavItem[] = [
   { name: "Awards", href: "#awards" },
   { name: "Education", href: "#education" },
 ];
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -30,6 +21,10 @@ export default function Navigation() {
     damping: 30,
     restDelta: 0.001
   });
+
+  // Keep existing scrollToSection and other logic
+  // ... rest of your original code
+}
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
