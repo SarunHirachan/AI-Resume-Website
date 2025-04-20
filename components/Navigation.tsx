@@ -1,4 +1,4 @@
-"use client"
+'use client'; // ADD THIS AT THE VERY TOP
 
 import { motion, useScroll, useSpring } from "framer-motion"
 import { useEffect, useState } from "react"
