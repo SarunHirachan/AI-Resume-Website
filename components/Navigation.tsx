@@ -1,9 +1,11 @@
 'use client' // MUST BE FIRST LINE
 
-import { motion, useScroll, useSpring } from 'framer-motion'
-import { useEffect, useState } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
-import { useTheme } from '@/context/ThemeContext'
+import { motion, useScroll, useSpring } from "framer-motion"
+import { useEffect, useState } from "react"
+import { FiMenu, FiX } from "react-icons/fi"
+
+// Keep your existing navItems array and other code
+// ... rest of your navigation code remains unchanged
 
 // Rest of your navigation code...
 
