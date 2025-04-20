@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/Navigation';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -10,15 +9,12 @@ const inter = Inter({
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans min-h-screen bg-[#121212] text-white">
-        <Navigation />
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {children}
-        </main>
+      <body className="min-h-screen bg-[#121212] text-white">
+        {children}
       </body>
     </html>
   );
