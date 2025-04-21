@@ -64,8 +64,8 @@ const config: Config = {
   },
   plugins: [
     animate, // Use imported plugin
-    require("@tailwindcss/typography"), // Should already exist
-  require("tailwindcss-animate"),
+    require("@tailwindcss/typography"), // Correct package name
+    require("tailwindcss-animate")
   ],
 };
 
